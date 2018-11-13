@@ -28,7 +28,7 @@ if err != nil {
 defer db.Close()
 ```
 
-Add as custome rule to govalidator
+Add as custom rule to govalidator
 
 ```go
 uniqueRule := uniquevalidator.NewUniqueRule(db, "unique")
@@ -39,7 +39,7 @@ govalidator.AddCustomRule("unique", uniqueRule.Rule)
 
 Format: `unique:table,column,except,idColumn`
 
-To check if attribute is unique.
+To check if attribute is unique:
 
 ```go
 rules := govalidator.MapData{
@@ -47,7 +47,7 @@ rules := govalidator.MapData{
 }
 ```
 
-Forcing A Unique Rule To Ignore A Given ID.
+Forcing A Unique Rule To Ignore A Given ID:
 
 ```go
 rules := govalidator.MapData{
